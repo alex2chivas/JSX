@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = () => {
-  return (
-    <div>
-      Hello World
-    </div>
-  )
-}
+import CommentDetail from './CommentDetail';
 
-ReactDOM.render(
-  <App/>,
-  document.querySelector("#root")
-);
+const App = (props) => {
+  return (
+    <div className='ui container comments'>
+      <CommentDetail author={'Alexis'} />
+      <CommentDetail author={'James'} />
+      <CommentDetail author={'Frank'} />
+      <CommentDetail author={'Freddie'} />
+      <CommentDetail author={'David'} />
+    </div>
+  );
+};
+
+ReactDOM.render(<App />, document.querySelector('#root'));
